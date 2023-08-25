@@ -1,0 +1,138 @@
+.footer {
+  background: $color-background-primary;
+  font-size: $xxl;
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 48px;
+    ul {
+      display: flex;
+      font-size: $xs;
+      color: $color-text-white;
+      li {
+        margin-right: 48px;
+        a:hover {
+          color: $color-text-hover-lighter;
+        }
+      }
+    }
+    .contact-icon {
+      display: flex;
+      a {
+        margin-left: 32px;
+      }
+      img {
+        display: block;
+        width: 48px;
+      }
+    }
+  }
+
+  .info-block {
+    padding-top: 24px;
+    .click-block {
+      display: flex;
+      align-items: center;
+    }
+    .click-block:first-child {
+      margin-bottom: 8px;
+    }
+    h3 {
+      display: inline-block;
+      font-size: $l;
+      color: $color-text-white;
+      :hover {
+        color: $color-text-hover-lighter;
+      }
+    }
+    span {
+      color: $color-text-white;
+      margin-right: 22px;
+    }
+    .phone {
+      font-size: 36px;
+    }
+    .email {
+      font-size: 40px;
+    }
+    .line {
+      border-bottom: 1px solid $color-border-white;
+      padding: 16px 0;
+    }
+  }
+
+  .copyright {
+    color: $color-text-white;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      h6 {
+        margin-left: 46px;
+      }
+    }
+  }
+}
+
+@include Pad {
+  .footer {
+    .footer-menu {
+      .contact-icon {
+        a {
+          margin-left: 16px;
+        }
+        a:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@include Mobile {
+  .footer {
+    .footer-menu {
+      display: inline-block;
+      padding-top: 24px;
+      float: right;
+      .show {
+        display: none;
+      }
+      .contact-icon {
+        img {
+          display: block;
+          width: 24px;
+        }
+      }
+    }
+    .info-block {
+      h3 {
+        font-size: 16px;
+      }
+      .phone {
+        font-size: 24px;
+      }
+      .email {
+        font-size: 24px;
+      }
+      span {
+        margin-right: 11px;
+      }
+    }
+    .copyright {
+      flex-direction: column;
+      align-items: flex-start;
+      div {
+        flex-direction: column;
+        h6 {
+          margin: 0;
+        }
+        h6:first-child {
+          padding: 9px 0;
+        }
+      }
+    }
+  }
+}

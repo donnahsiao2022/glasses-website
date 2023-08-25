@@ -1,0 +1,35 @@
+<div class="pagination">
+  <a href="#" class="prev">上一頁</a>
+  <a href="#" class="page selected">1</a>
+  <a href="#" class="page">2</a>
+  <a href="#" class="page">3</a>
+  <a href="#" class="page">4</a>
+  <a href="#" class="page">5</a>
+  <a href="#" class="next">下一頁</a>
+</div>
+
+<script>
+  const pages = document.querySelectorAll('.page');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  let currentPageIndex = 0;
+
+  pages.forEach((page) => {
+    page.addEventListener('click', (event) => {
+      event.preventDefault();
+      pages.forEach((p) => p.classList.remove('selected'));
+      page.classList.add('selected');
+      currentPageIndex = Array.from(pages).indexOf(page);
+      updateButtonState();
+    });
+  });
+
+  const updateButtonState = () => {
+    prevButton.classList.toggle('disabled', currentPageIndex === 0);
+    nextButton.classList.toggle(
+      'disabled',
+      currentPageIndex === pages.length - 1
+    );
+  };
+  updateButtonState();
+</script>

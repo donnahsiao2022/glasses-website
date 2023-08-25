@@ -1,0 +1,64 @@
+.header {
+  background: $color-background-primary;
+  font-size: $s;
+  color: $color-text-white;
+}
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  padding: 16px 0;
+}
+
+.a-block {
+  a {
+    margin-left: 32px;
+  }
+  a:hover {
+    color: $color-text-hover-lighter;
+  }
+}
+
+@include Pad {
+  .a-block {
+    a {
+      margin-left: 64px;
+    }
+  }
+}
+
+@include Mobile {
+  .header {
+    .container {
+      padding: 0;
+    }
+  }
+  .header-block {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .logo-block {
+    padding-left: 14px;
+  }
+  .a-block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      margin: 0;
+      width: 50%;
+      text-align: center;
+      padding: 12px 0;
+      border: 1px solid $color-border-white;
+      border-right: none;
+    }
+    a:nth-child(1),
+    a:nth-child(3) {
+      border-left: none;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@mixin Web {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin Pad {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin Mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin Mobile-xs {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+@media screen and (max-width: 1296px) {
+  .container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: $m;
+  }
+  h5 {
+    font-size: $xs;
+  }
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .p80-0 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "gh-pages": "^5.0.0",
+    "glob": "^10.2.7",
+    "npm": "^9.7.1",
+    "sass": "^1.63.4",
+    "sass-loader": "^13.3.2",
+    "vite": "^4.3.9",
+    "vite-plugin-ejs": "^1.6.4",
+    "vite-plugin-live-reload": "^3.0.2"
+  },
+  "name": "perfume-site",
+  "version": "1.0.0",
+  "description": "RWD practice - perfume site",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LandyHsiao/glasses-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LandyHsiao/glasses-site/issues"
+  },
+  "homepage": "https://github.com/LandyHsiao/glasses-site#readme"
+}
